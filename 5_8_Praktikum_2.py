@@ -105,10 +105,12 @@ append_q('Слайд №2')
 append_left_q('Слайд №1')
 append_q('Слайд №3')
 print(q)
+
 append_q("Вступление")
 i = pop_q()
 append_left_q(i)
 print(q)
+
 popleft_q()
 append_left_q("Титул")
 print(q)
