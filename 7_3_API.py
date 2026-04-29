@@ -91,6 +91,11 @@ def get_info(user_id):
 
     if response.status_code == 200:
         info = response.json()
+
+        if 'error' in info:
+            print(f'Код ошибки: {info['error'].get('error_code')}. {info['error'].get('error_msg')}')
+            return
+
         user = info['response'][0]
 
         print(f"Информация пользователя {user.get('first_name', '')} {user.get('last_name', '')}: ")
