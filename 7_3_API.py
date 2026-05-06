@@ -67,7 +67,7 @@ def analyze_repos(repos):
 
 main()
 
-#VK API
+#VK APII
 import os
 import requests
 from  collections import Counter
