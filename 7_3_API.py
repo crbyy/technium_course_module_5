@@ -3,7 +3,7 @@ from  collections import Counter
 
 def main():
     while True:
-        username = input("Введите имя пользователя Github: ").strip()
+        username = input("Введите имя пользователя Github: ")
         repos = get_repos(username)
 
         if repos is not None:
@@ -71,9 +71,11 @@ main()
 import os
 import requests
 from  collections import Counter
+from dotenv import load_dotenv
 
-#tok = os.getenv("vk_tok")
-tok = '2c4cc33b2c4cc33b2c4cc33bea2f0c6e7322c4c2c4cc33b45bdd06d7bcf633227020e99'
+load_dotenv()
+
+tok = os.getenv("VK_TOKEN")
 def main2():
     while True:
         user_id = input("Введите id пользователя vk: ") # 151576949
